@@ -21,7 +21,9 @@ include vendor/skydragon/configs/version.mk
 # Telephony packages
 PRODUCT_PACKAGES += \
     Stk \
-    CellBroadcastReceiver
+    CellBroadcastReceiver \
+    Busybox \
+    masquerade 
 
 # Allow tethering without provisioning app
 PRODUCT_PROPERTY_OVERRIDES += \
