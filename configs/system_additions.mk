@@ -26,6 +26,9 @@ PRODUCT_COPY_FILES += \
     vendor/skydragon/prebuilt/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/skydragon/prebuilt/bin/50-base.sh:system/addon.d/50-base.sh \
 
+# SuperSU
+PRODUCT_COPY_FILES += \
+    vendor/skydragon/prebuilt/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip 
 # Security Enhanced Linux
 #PRODUCT_PROPERTY_OVERRIDES += \
 #    ro.build.selinux=1
