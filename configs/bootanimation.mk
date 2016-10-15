@@ -1,4 +1,4 @@
-# Copyright (C) 2016 The SkyDragon Open Source Project
+# Copyright (C) 2016 SkyDragon
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -15,13 +15,13 @@
 # Add Stock Lollipop bootanimation based on device
 ifneq ($(filter sd_angler,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
-        vendor/skydragon/prebuilt/bootanimation/angler.zip:system/media/bootanimation.zip
+        vendor/custom/prebuilt/bootanimation/angler.zip:system/media/bootanimation.zip
 endif
 ifneq ($(filter sd_bullhead,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
-        vendor/skydragon/prebuilt/bootanimation/bullhead.zip:system/media/bootanimation.zip
+        vendor/custom/prebuilt/bootanimation/bullhead.zip:system/media/bootanimation.zip
 endif
 ifneq ($(filter sd_shamu,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
-        vendor/skydragon/prebuilt/bootanimation/shamu.zip:system/media/bootanimation.zip
+        vendor/custom/prebuilt/bootanimation/shamu.zip:system/media/bootanimation.zip
 endif

@@ -1,7 +1,7 @@
-#
+# SkyDragon
 # This policy configuration will be used by all products that
-# inherit from SkyDragon
+# inherit from Wolf's Realm
 #
 
 BOARD_SEPOLICY_DIRS += \
-    vendor/skydragon/sepolicy
+    vendor/custom/sepolicy

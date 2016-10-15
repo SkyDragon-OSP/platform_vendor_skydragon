@@ -1,4 +1,4 @@
-# Copyright (C) 2016 The SkyDragon Open Source Project
+# Copyright (C) 2016 SkyDragon
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,12 +14,7 @@
 
 # Include overlays
 PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/skydragon/overlay/common
-
-# Main Required Packages
-PRODUCT_PACKAGES += \
-    Launcher3 \
-    LiveWallpapersPicker
+    vendor/custom/overlay/common
 
 # Custom Packages
 PRODUCT_PACKAGES += \

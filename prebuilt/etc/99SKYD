@@ -1,0 +1,70 @@
+#!/system/bin/sh
+
+SDCONF="/system/etc/skydragon.conf"
+SDLOGFILE="/data/sdkernel.log"
+
+echo $(date) >> $SDLOGFILE
+
+#Set Wake Gestures
+if [ "`grep WG=1 $SDCONF`" ]; then
+  echo 1 > /sys/android_touch/wake_gestures
+  echo Wake gestures enabled >> $SDLOGFILE;
+else
+  echo 0 > /sys/android_touch/wake_gestures
+  echo Wake gestures disabled >> $SDLOGFILE;
+fi
+
+#Set Sweep2wake
+S2W="`grep S2W $SDCONF | cut -d '=' -f2`"
+  echo $S2W > /sys/android_touch/sweep2wake
+  echo Sweep2wake $S2W >> $SDLOGFILE;
+
+#Set Doubletap2wake
+if [ "`grep DT2W=1 $SDCONF`" ]; then
+  echo 1 > /sys/android_touch/doubletap2wake
+  echo Doubletap2wake enabled >> $SDLOGFILE;
+else
+  echo 0 > /sys/android_touch/doubletap2wake
+  echo Doubletap2wake disabled >> $SDLOGFILE;
+fi
+
+#Set Sweep2sleep
+if [ "`grep S2S=1 $SDCONF`" ]; then
+  echo 1 > /sys/android_touch/sweep2sleep
+  echo Sweep2sleep right enabled >> $SDLOGFILE;
+elif [ "`grep S2S=2 $SDCONF`" ]; then
+  echo 2 > /sys/android_touch/sweep2sleep
+  echo Sweep2sleep left enabled >> $SDLOGFILE;
+elif [ "`grep S2S=3 $SDCONF`" ]; then
+  echo 3 > /sys/android_touch/sweep2sleep
+  echo Sweep2sleep left and right enabled >> $SDLOGFILE;
+else
+  echo 0 > /sys/android_touch/sweep2sleep
+  echo Sweep2sleep disabled >> $SDLOGFILE;
+fi
+
+#Set Wake vibration strength
+WVIB="`grep WVIB $SDCONF | cut -d '=' -f2`"
+  echo $WVIB > /sys/android_touch/vib_strength
+  echo Wake vibration strength $WVIB >> $SDLOGFILE;
+
+#Set charge led
+if [ "`grep CHGLED=1 $SDCONF`" ]; then
+  echo battery-charging > /sys/class/leds/charging/trigger;
+  echo 1 > /sys/class/leds/charging/max_brightness;
+  echo charge led enabled >> $SDLOGFILE;
+fi
+
+#Set FASTCHARGE
+if [ "`grep FC=1 $SDCONF`" ]; then
+  echo 1 > /sys/kernel/fast_charge/force_fast_charge
+  echo USB Fastcharge enabled >> $SDLOGFILE;
+else
+  echo 0 > /sys/kernel/fast_charge/force_fast_charge
+  echo USB Fastcharge disabled >> $SDLOGFILE;
+fi
+
+#update saved config
+cp /system/etc/skydragon.conf /sdcard/skydragon.backup
+
+exit 0

@@ -1,2 +1,1 @@
-SkyDragon Open Source Project 
-Vendor Files
+SkyDragon Vendor Files
