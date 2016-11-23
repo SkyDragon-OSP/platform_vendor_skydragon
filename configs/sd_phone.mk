@@ -27,7 +27,15 @@ PRODUCT_PACKAGES += \
 # Allow tethering without provisioning app
 PRODUCT_PROPERTY_OVERRIDES += \
     net.tethering.noprovisioning=true
-
+	
 # Thank you, please drive thru!
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.dun.override=0
+
+# Enable Assistant
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.opa.eligible_device=true
+	
+# Enable Substratum
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.substratum.verified=true

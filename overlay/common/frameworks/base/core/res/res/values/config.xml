@@ -23,6 +23,30 @@
     </string-array>
 
     <bool name="config_cellBroadcastAppLinks">true</bool>
+    <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
+    <bool translatable="false" name="config_wifi_dual_band_support">true</bool>
+    <!-- Integer specifying the basic autojoin parameters -->
+    <integer translatable="false" name="config_wifi_framework_5GHz_preference_boost_threshold">-70</integer>
+    <integer translatable="false" name="config_wifi_framework_5GHz_preference_boost_factor">40</integer>
+    <integer translatable="false" name="config_wifi_framework_5GHz_preference_penalty_threshold">-80</integer>
+    <!-- Integer parameters of the wifi to cellular handover feature
+         wifi should not stick to bad networks -->
+    <integer translatable="false" name="config_wifi_framework_wifi_score_bad_rssi_threshold_5GHz">-85</integer>
+    <integer translatable="false" name="config_wifi_framework_wifi_score_low_rssi_threshold_5GHz">-73</integer>
+    <integer translatable="false" name="config_wifi_framework_wifi_score_good_rssi_threshold_5GHz">-60</integer>
+    <integer translatable="false" name="config_wifi_framework_wifi_score_bad_rssi_threshold_24GHz">-85</integer>
+    <integer translatable="false" name="config_wifi_framework_wifi_score_low_rssi_threshold_24GHz">-73</integer>
+    <integer translatable="false" name="config_wifi_framework_wifi_score_good_rssi_threshold_24GHz">-60</integer>
+    <!-- Control whether Night display is available. This should only be enabled on devices
+         with HWC 2.0 or higher. -->
+    <bool name="config_nightDisplayAvailable">true</bool>
+    <!-- Default mode to control how Night display is automatically activated.
+         One of the following values (see NightDisplayController.java):
+             0 - AUTO_MODE_DISABLED
+             1 - AUTO_MODE_CUSTOM
+             2 - AUTO_MODE_TWILIGHT
+    -->
+    <integer name="config_defaultNightDisplayAutoMode">1</integer>
 
     <!-- Disable stock OTA components if installed -->
     <string-array name="config_disabledComponents" translatable="false">
