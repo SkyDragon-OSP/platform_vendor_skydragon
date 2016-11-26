@@ -12,6 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+LOCAL_PATH := $(call my-dir)
+
+# Include UBER common configuration
+include vendor/custom/configs/uber.mk
+
+# Squisher Location
+SQUISHER_SCRIPT := vendor/custom/tools/squisher
+
 # Include overlays
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/custom/overlay/common

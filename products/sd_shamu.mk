@@ -22,7 +22,7 @@ $(call inherit-product, device/moto/shamu/aosp_shamu.mk)
 PRODUCT_NAME := sd_shamu
 PRODUCT_BRAND := nexus
 PRODUCT_DEVICE := shamu
-PRODUCT_MODEL := Nexus 6
+PRODUCT_MODEL := Pixel XL
 PRODUCT_MANUFACTURER := motorola
 
 # Device Fingerprint
