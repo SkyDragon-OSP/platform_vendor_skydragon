@@ -12,15 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Include SkyDragon telephony configuration
-include vendor/custom/configs/sd_phone.mk
-
 # Inherit AOSP device configuration for angler
 $(call inherit-product, device/huawei/angler/aosp_angler.mk)
 
-# Override AOSP build properties
+# Inherit common product files.
+$(call inherit-product, vendor/custom/configs/common.mk)
+
+# Setup device specific product configuration.
 PRODUCT_NAME := sd_angler
-PRODUCT_BRAND := nexus
+PRODUCT_BRAND := Google
 PRODUCT_DEVICE := angler
 PRODUCT_MODEL := Pixel XL
 PRODUCT_MANUFACTURER := Huawei
@@ -28,5 +28,6 @@ PRODUCT_MANUFACTURER := Huawei
 # Device Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=angler \
-    BUILD_FINGERPRINT=google/angler/angler:7.0/NBD90X/3254009:user/release-keys \
-    PRIVATE_BUILD_DESC="angler-user 7.0 NBD90X 3254009 release-keys" 
+    BUILD_FINGERPRINT=google/angler/angler:7.0/NBD91K/3318877:user/release-keys \
+    PRIVATE_BUILD_DESC="angler-user 7.0 NBD91K 3318877 release-keys"
+

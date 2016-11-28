@@ -13,14 +13,14 @@
 # limitations under the License.
 
 # Include SkyDragon telephony configuration
-include vendor/custom/configs/sd_phone.mk
+include vendor/custom/configs/common.mk
 
 # Inherit AOSP device configuration for shamu.
 $(call inherit-product, device/moto/shamu/aosp_shamu.mk)
 
 # Override AOSP build properties
 PRODUCT_NAME := sd_shamu
-PRODUCT_BRAND := nexus
+PRODUCT_BRAND := Google
 PRODUCT_DEVICE := shamu
 PRODUCT_MODEL := Pixel XL
 PRODUCT_MANUFACTURER := motorola
@@ -28,5 +28,5 @@ PRODUCT_MANUFACTURER := motorola
 # Device Fingerprint
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=shamu \
-    BUILD_FINGERPRINT=google/shamu/shamu:7.0/NBD90Z/3264873:user/release-keys \
-    PRIVATE_BUILD_DESC="shamu-user 7.0 NBD90Z 3264873 release-keys"
+    BUILD_FINGERPRINT=google/shamu/shamu:7.0/NBD91P/3397968:user/release-keys \
+	PRIVATE_BUILD_DESC="shamu-user 7.0 NBD91P 3397968 release-keys" 
