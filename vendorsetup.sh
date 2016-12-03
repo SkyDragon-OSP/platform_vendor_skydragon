@@ -1,3 +1,5 @@
 add_lunch_combo sd_angler-user
 add_lunch_combo sd_bullhead-user
+add_lunch_combo sd_marlin-user
+add_lunch_combo sd_sailfish-user
 add_lunch_combo sd_shamu-user

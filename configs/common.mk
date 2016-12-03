@@ -117,6 +117,14 @@ ifneq ($(filter sd_bullhead,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/custom/prebuilt/bootanimation/bullhead.zip:system/media/bootanimation.zip
 endif
+ifneq ($(filter sd_marlin,$(TARGET_PRODUCT)),)
+    PRODUCT_COPY_FILES += \
+        vendor/custom/prebuilt/bootanimation/marlin.zip:system/media/bootanimation.zip
+endif
+ifneq ($(filter sd_sailfish,$(TARGET_PRODUCT)),)
+    PRODUCT_COPY_FILES += \
+        vendor/custom/prebuilt/bootanimation/sailfish.zip:system/media/bootanimation.zip
+endif
 ifneq ($(filter sd_shamu,$(TARGET_PRODUCT)),)
     PRODUCT_COPY_FILES += \
         vendor/custom/prebuilt/bootanimation/shamu.zip:system/media/bootanimation.zip

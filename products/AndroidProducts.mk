@@ -18,6 +18,12 @@ endif
 ifeq (sd_bullhead,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/sd_bullhead.mk
 endif
+ifeq (sd_marlin,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/sd_marlin.mk
+endif
+ifeq (sd_sailfish,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/sd_sailfish.mk
+endif
 ifeq (sd_shamu,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/sd_shamu.mk
 endif
