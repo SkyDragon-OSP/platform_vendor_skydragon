@@ -43,6 +43,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     net.tethering.noprovisioning=true \
     persist.sys.dun.override=0 \
     ro.substratum.verified=true
+    persist.sys.root_access=1
 
 # Google Assistant
  PRODUCT_PROPERTY_OVERRIDES += \
